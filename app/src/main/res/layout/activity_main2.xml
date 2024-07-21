@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -21,6 +21,6 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="140dp"
             android:onClick="onClick"
-            android:text="Ir a Pagina2" />
+            android:text="Ir a Pagina 1" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
