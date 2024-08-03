@@ -2,25 +2,106 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="365dp"
+        android:layout_height="731dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="330dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Ingrese Cantidad"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
 
         <Button
-            android:id="@+id/button8"
-            android:layout_width="327dp"
+            android:id="@+id/calculateButton"
+            android:layout_width="332dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="140dp"
-            android:onClick="onClick"
-            android:text="Ir a Pagina 1" />
+            android:layout_marginBottom="16dp"
+            android:text="Sumar Cantidades" />
+
+        <TextView
+            android:id="@+id/subTotalTextView"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Sub-Total: Q0.00"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/paymentOptionGroup"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/optionCashOnDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Pago Contra Entrega" />
+
+            <RadioButton
+                android:id="@+id/optionPrePayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depósito Previo" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/restanteEditText"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Pago al Recibir"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/calculateFinalButton"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:text="Calcular Total" />
+
+        <TextView
+            android:id="@+id/finalAmountTextView"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="TOTAL: Q0.00"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/anticipoEditText"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="ANTICIPO: Q0.00"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

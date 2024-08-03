@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_consulta_st"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".Activity_ConsultaSt">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <LinearLayout
+            android:layout_width="365dp"
+            android:layout_height="731dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="330dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/ingresoStockTitle"
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Consulta de Registro"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/idEditText"
+                android:layout_width="337dp"
+                android:layout_height="46dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                android:hint="Id del Manga"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/tomo"
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Manga:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nombreEditText"
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Nombre del Manga"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/ingresoTomo"
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tomos Disponibles:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tomoEditText"
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Tomos"
+                android:inputType="text"
+                android:padding="10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/IngresoCnt"
+                    android:layout_width="334dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cantidad Disponible:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.7"/>
+
+                <EditText
+                    android:id="@+id/cntEditText"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="0.3"
+                    android:hint="Cantidad"
+                    android:inputType="number"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/actualizarButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginRight="2dp"
+                    android:text="Actualizar"
+                    android:onClick="onClick"/>
+
+                <Button
+                    android:id="@+id/eliminarButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="2dp"
+                    android:text="Eliminar"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
